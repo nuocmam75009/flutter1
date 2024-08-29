@@ -5,12 +5,37 @@ class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: appBar(),
-    );
-  }
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: appBar(),
+    body: Column(
+      children: [
+        Container(
+          margin: const EdgeInsets.only(top: 40, left: 20, right: 20),
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.11),
+                spreadRadius: 0.5,
+                blurRadius: 35,
+                offset: const Offset(0, 3),
+              ),
+            ],
+          ),
+          child: Container(
+            child: const TextField(
+              decoration: InputDecoration(
+                filled: true,
+                fillColor: Colors.white,
+              ),
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
+}
 
   AppBar appBar() {
     return AppBar(
