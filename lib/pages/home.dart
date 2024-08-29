@@ -24,10 +24,26 @@ Widget build(BuildContext context) {
             ],
           ),
           child: Container(
-            child: const TextField(
+            child: TextField(
               decoration: InputDecoration(
                 filled: true,
                 fillColor: Colors.white,
+                contentPadding: EdgeInsets.all(15),
+                prefixIcon: Padding(
+                  padding: const EdgeInsets.all(12),
+                  child: SvgPicture.asset('assets/icons/Search.svg'),
+                ),
+                suffixIcon: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SvgPicture.asset('assets/icons/Filter.svg'),
+                ),
+                border: OutlineInputBorder(
+                  borderRadius: const BorderRadius.all(Radius.circular(10)),
+                  borderSide: const BorderSide(
+                    width: 0,
+                    style: BorderStyle.none,
+                  ),
+                ),
               ),
             ),
           ),
