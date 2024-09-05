@@ -18,7 +18,7 @@ class Category_Model {
       Category_Model(
         name: 'Salad',
         iconPath: 'assets/icons/plate.svg',
-        boxColor: Color(0xFFD7FADA),
+        boxColor: const Color(0xFFD7FADA),
       ),
     );
 
@@ -26,7 +26,7 @@ class Category_Model {
       Category_Model(
         name: 'Cake',
         iconPath: 'assets/icons/pancakes.svg',
-        boxColor: Color(0xFFE4D7FF),
+        boxColor: const Color(0xFFE4D7FF),
       ),
     );
 
@@ -34,7 +34,7 @@ class Category_Model {
       Category_Model(
         name: 'Pie',
         iconPath: 'assets/icons/pie.svg',
-        boxColor: Color(0xFFE9F7F1),
+        boxColor: const Color(0xFFE9F7F1),
       ),
     );
 
@@ -42,7 +42,7 @@ class Category_Model {
       Category_Model(
         name: 'Smoothies',
         iconPath: 'assets/icons/orange-snacks.svg',
-        boxColor: Color(0xFFE9F7F1),
+        boxColor: const Color(0xFFE9F7F1),
       ),
     );
 

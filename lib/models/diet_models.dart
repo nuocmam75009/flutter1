@@ -29,7 +29,7 @@ class DietModel {
         level: 'Easy',
         duration: '30 min',
         calorie: '350 kCal',
-        boxColor: Color(0xFFE4D7FF),
+        boxColor: const Color(0xFFE4D7FF),
         viewIsSelected: true,
       ),
     );
@@ -41,7 +41,30 @@ class DietModel {
         level: 'Medium',
         duration: '45 min',
         calorie: '230 kCal',
-        boxColor: Color(0xFFD7FADA),
+        boxColor: const Color(0xFFD7FADA),
+        viewIsSelected: false,
+      ),
+    );
+    diets.add(
+      DietModel(
+        name: 'Canai Bread',
+        iconPath: 'assets/icons/canai-bread.svg',
+        level: 'Medium',
+        duration: '45 min',
+        calorie: '230 kCal',
+        boxColor: const Color(0xFFD7FADA),
+        viewIsSelected: false,
+      ),
+    );
+
+    diets.add(
+      DietModel(
+        name: 'Canai Bread',
+        iconPath: 'assets/icons/canai-bread.svg',
+        level: 'Medium',
+        duration: '45 min',
+        calorie: '230 kCal',
+        boxColor: const Color(0xFFD7FADA),
         viewIsSelected: false,
       ),
     );

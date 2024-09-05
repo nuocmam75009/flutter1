@@ -35,10 +35,11 @@ class _HomePageState extends State<HomePage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           searchBar(),
-          SizedBox(height: 40),
+          const SizedBox(height: 40),
           _categoriesSection(),
-          SizedBox(height: 40),
+          const SizedBox(height: 40),
           _dietSection(),
+
         ],
       ),
     );
@@ -60,7 +61,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             const SizedBox(height: 15,),
-            Container(
+            SizedBox(
               height: 240,
               child: ListView.separated(
                 itemBuilder: (context, index) {
@@ -85,7 +86,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                             Text(
-                              diets[index].level + ' | ' + diets[index].duration + ' | ' + diets[index].calorie,
+                              '${diets[index].level} | ${diets[index].duration} | ${diets[index].calorie}',
                               style: const TextStyle(
                                 color: Color(0xff7B6F72),
                                 fontSize: 13,
@@ -97,6 +98,15 @@ class _HomePageState extends State<HomePage> {
                         Container(
                           height: 45,
                           width: 130,
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                diets[index].viewIsSelected ? const Color(0xff9DCEFF) : Colors.transparent,
+                                diets[index].viewIsSelected ? const Color(0xff92A3FD) : Colors.transparent
+                              ]
+                            ),
+                            borderRadius: BorderRadius.circular(50)
+                          ),
                           child: Center(
                             child: Text(
                               'View',
@@ -106,15 +116,6 @@ class _HomePageState extends State<HomePage> {
                                 fontSize: 14
                               ),
                             ),
-                          ),
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                diets[index].viewIsSelected ? const Color(0xff9DCEFF) : Colors.transparent,
-                                diets[index].viewIsSelected ? const Color(0xff92A3FD) : Colors.transparent
-                              ]
-                            ),
-                            borderRadius: BorderRadius.circular(50)
                           ),
                         )
                       ],
@@ -138,9 +139,9 @@ class _HomePageState extends State<HomePage> {
     return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 20),
-              child: const Text(
+            const Padding(
+              padding: EdgeInsets.only(left: 20),
+              child: Text(
                 'Categories',
                 style: TextStyle(
                   color: Colors.black,
@@ -149,8 +150,8 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            SizedBox(height: 15),
-            Container(
+            const SizedBox(height: 15),
+            SizedBox(
               height: 150,
               child: ListView.separated(
                 itemCount: categories.length,
@@ -169,7 +170,7 @@ class _HomePageState extends State<HomePage> {
                         Container(
                           width: 50,
                           height: 50,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.white,
                             shape: BoxShape.circle
                           ),
@@ -180,7 +181,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         Text(
                           categories[index].name,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.black,
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
